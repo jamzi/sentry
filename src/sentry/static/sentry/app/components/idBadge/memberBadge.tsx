@@ -3,7 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {AvatarUser, Member} from 'app/types';
 import UserAvatar from 'app/components/avatar/userAvatar';
-import Link from 'app/components/links/link';
+import Link, {LinkProps} from 'app/components/links/link';
 import overflowEllipsis from 'app/styles/overflowEllipsis';
 import space from 'app/styles/space';
 import SentryTypes from 'app/sentryTypes';
@@ -106,7 +106,7 @@ const StyledEmail = styled('div')`
 type NameProps = {
   useLink: boolean;
   hideEmail: boolean;
-} & Link['props'];
+} & LinkProps;
 
 const StyledName = styled<NameProps>(({useLink, to, ...props}) => {
   const forwardProps = omit(props, 'hideEmail');

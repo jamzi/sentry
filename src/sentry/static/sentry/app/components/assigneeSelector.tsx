@@ -284,7 +284,6 @@ const AssigneeSelectorComponent = createReactClass<Props, State>({
             menuFooter={
               <InviteMemberLink
                 data-test-id="invite-member"
-                disabled={loading}
                 onClick={() => openInviteMembersModal({source: 'assignee_selector'})}
               >
                 <MenuItemWrapper>

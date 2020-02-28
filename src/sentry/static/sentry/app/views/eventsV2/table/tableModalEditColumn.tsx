@@ -194,7 +194,7 @@ class TableModalEditColumnBodyForm extends React.Component<
 }
 
 const TableModalEditColumnFooter = () => (
-  <FooterContent href={`${DISCOVER2_DOCS_URL}query-builder/`} target="_blank">
+  <FooterContent to={`${DISCOVER2_DOCS_URL}query-builder/`} external>
     <StyledIconDocs /> {t('Read the docs')}
     <StyledIconChevron direction="right" size="xs" />
   </FooterContent>

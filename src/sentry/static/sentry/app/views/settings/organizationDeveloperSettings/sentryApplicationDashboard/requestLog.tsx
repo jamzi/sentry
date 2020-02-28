@@ -87,7 +87,7 @@ const ResponseCode = ({code}: {code: number}) => {
 
 const TimestampLink = ({date, link}: {date: moment.MomentInput; link?: string}) => {
   return link ? (
-    <Link to={link} target="_blank">
+    <Link to={link} external>
       <DateTime date={date} />
       <StyledInlineSvg src="icon-open" size="12px" />
     </Link>

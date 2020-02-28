@@ -13,7 +13,7 @@ type PropsWithHref = {href: string};
 type PropsWithTo = {to: LocationDescriptor};
 type OtherProps = {
   icon?: string;
-  onClick?: (e: React.MouseEvent) => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 type DefaultProps = {
   size: Size;
@@ -33,10 +33,10 @@ export default class AlertLink extends React.Component<Props> {
     return (
       <StyledLink
         to={(this.props as PropsWithTo).to}
-        href={(this.props as PropsWithHref).href}
         onClick={onClick}
         size={size}
         priority={priority}
+        external
       >
         {icon && <StyledInlineSvg src={icon} size="1.5em" spacingSize={size} />}
         <AlertLinkText>{children}</AlertLinkText>
